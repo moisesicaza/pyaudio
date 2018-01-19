@@ -13,3 +13,9 @@ Extract audio (.mp3) from a youtube video using [youtube-dl](https://rg3.github.
 - Go to root directory.
 - Install dependencies: <code>pip install -r requirements.txt</code>
 - Run the application: <code>python main.py</code>
+
+## Considerations
+
+- For Windows and Linux platform is required FFmpeg libraries.
+- For Linux platform is require installed Tkinter for Python 3 module.
+- It's recommended to have the pip package manager installed.
