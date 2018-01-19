@@ -22,4 +22,4 @@ Extract audio (.mp3) from a youtube video using [youtube-dl](https://rg3.github.
 
 ## Preview
 
-![Preview image](https://photos.app.goo.gl/YbO9nF6T1BTVcs523)
+[Preview image](https://photos.app.goo.gl/YbO9nF6T1BTVcs523)
