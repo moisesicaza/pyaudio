@@ -20,6 +20,6 @@ Extract audio (.mp3) from a youtube video using [youtube-dl](https://rg3.github.
 - For Linux platform is require installed Tkinter for Python 3 module.
 - It's recommended to have the pip package manager installed.
 
-## Preview
+## Screenshot
 
 [Preview image](https://photos.app.goo.gl/YbO9nF6T1BTVcs523)
