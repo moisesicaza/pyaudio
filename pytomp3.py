@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
+import re
 import tkinter as tk
-from tkinter import ttk, Frame, END
 import youtube_dl
+from tkinter import ttk, Frame, END
 from tkinter import messagebox
 
 
@@ -98,17 +99,24 @@ class PyToMp3:
         """ Converts the video form youtube.com url.
         :return: void.
         """
-        ydl_opts = {
-            'format': 'bestaudio/best',
-            'outtmpl': 'downloads/%(title)s.%(ext)s',
-            'postprocessors': [{
-                'key': 'FFmpegExtractAudio',
-                'preferredcodec': 'mp3',
-                'preferredquality': '192',
-            }],
-            'logger': CustomLogger(),
-            'progress_hooks': [self.progress_hook],
-        }
+        url = self.youtube_url.get()
+        regex = r"^(http(s)?:\/\/)?((w){3}.)?youtu(be|.be)?(\.com)?\/.+"
 
-        with youtube_dl.YoutubeDL(ydl_opts) as ydl:
-            ydl.download([self.youtube_url.get()])
+        if not re.search(regex, url):
+            messagebox.showerror("Error", "This is not a valid Youtube URL")
+
+        else:
+            ydl_opts = {
+                'format': 'bestaudio/best',
+                'outtmpl': 'downloads/%(title)s.%(ext)s',
+                'postprocessors': [{
+                    'key': 'FFmpegExtractAudio',
+                    'preferredcodec': 'mp3',
+                    'preferredquality': '192',
+                }],
+                'logger': CustomLogger(),
+                'progress_hooks': [self.progress_hook],
+            }
+
+            with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+                ydl.download([url])
