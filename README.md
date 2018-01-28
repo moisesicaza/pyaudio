@@ -7,7 +7,7 @@ Extract audio (.mp3) from a youtube video using [youtube-dl](https://rg3.github.
 - Tkinter module (for GUI)
 - youtube-dl module
 
-## Instalation
+## Installation
 
 - Clone this repository.
 - Go to root directory.
