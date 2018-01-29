@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 import re
+import threading
 import tkinter as tk
 import youtube_dl
 from tkinter import ttk, Frame, END
@@ -57,7 +58,7 @@ class PyToMp3:
         # Widgets
         self.label.config(text="YouTube URL:")
         self.entry.config(width=40, textvariable=self.youtube_url)
-        self.button.config(text="Convert", command=self.convert_video)
+        self.button.config(text="Convert", command=self.run_process)
         self.progress_bar.config(orient="horizontal", length=400, mode="determinate")
 
     def layout(self):
@@ -78,6 +79,12 @@ class PyToMp3:
         self.config_gui()
         self.layout()
         self.root.mainloop()
+
+    def run_process(self):
+        """ Executes the download process in a separate thread.
+        :return: void
+        """
+        threading.Thread(target=self.convert_video).start()
 
     def progress_hook(self, data):
         """ Hook of the process progress.
