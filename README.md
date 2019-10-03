@@ -1,5 +1,5 @@
 # PyToMp3
-Extract audio (.mp3) from a youtube video using [youtube-dl](https://rg3.github.io/youtube-dl/) Python module.
+Extracts the sound (.mp3) from a Youtube video using [youtube-dl](https://rg3.github.io/youtube-dl/) Python module.
 
 ## Requirements
 
@@ -9,17 +9,19 @@ Extract audio (.mp3) from a youtube video using [youtube-dl](https://rg3.github.
 
 ## Installation
 
-- Clone this repository.
-- Go to root directory.
+- Clone this repository
+- Go to the root directory
 - Install dependencies: <code>pip install -r requirements.txt</code>
 - Run the application: <code>python main.py</code>
 
 ## Considerations
 
-- For Windows and Linux platform is required FFmpeg libraries.
-- For Linux platform is require installed Tkinter for Python 3 module.
-- It's recommended to have the pip package manager installed.
+- For Windows and Linux platform is required FFmpeg libraries
+- For Linux platform is require installed Tkinter module for Python 3
+- It is recommended to have the pip package manager installed
 
-## Screenshot
+## Screenshots
 
-![Preview image](imgs/preview.png)
+![Preview image](img/image-1.png)
+
+![Preview image](img/image-2.png)
